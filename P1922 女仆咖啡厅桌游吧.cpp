@@ -1,14 +1,14 @@
 /*** 
  * @Author: P19Y0UN9_居居
- * @Date: 2020-04-30 10:15:37
- * @LastEditTime: 2020-08-04 11:21:28
+ * @Date: 2020-08-04 10:07:06
+ * @LastEditTime: 2020-08-04 11:04:01
  * @LastEditors: P19Y0UN9_居居
  * @Description: 
- * @FilePath: \Luogu\test.cpp
+ * @FilePath: \Luogu\P1922 女仆咖啡厅桌游吧.cpp
  * @居居 <jxygzzy@163.com>
  */
+
 #include <iostream>
-#include <cstring>
 #include <algorithm>
 #define maxn 100005
 
@@ -17,13 +17,11 @@ using namespace std;
 struct node
 {
     int to, next;
-} e[maxn];
+} e[maxn * 2];
 int head[maxn];
 int cnt;
-int ans[maxn];
-int n, m;
+int n;
 int vis[maxn];
-
 void add(int u, int v)
 {
     e[++cnt].to = v;
@@ -34,32 +32,37 @@ void add(int u, int v)
 int dfs(int x)
 {
     vis[x] = 1;
-    int ans = x;
+    int empty = 1;//最初假设都没建
+    int ans = 0;
     for (int i = head[x]; i; i = e[i].next)
     {
         if (!vis[e[i].to])
-            ans = max(ans, dfs(e[i].to));
+        {
+            int next = dfs(e[i].to);
+            if (next)
+            {
+                ans += next;
+            }
+            else//叶节点，一定是空
+            {
+                empty++;
+            }
+        }
     }
+    ans+=empty/2;//对半分
     return ans;
 }
 
 int main()
 {
-    cin >> n >> m;
+    cin >> n;
     int u, v;
-    for (int i = 1; i <= m; i++)
+    for (int i = 1; i <= n - 1; i++)
     {
         cin >> u >> v;
         add(u, v);
+        add(v, u);
     }
-    for (int i = 1; i <= n; i++)
-    {
-        memset(vis, 0, sizeof(vis));
-        ans[i] = dfs(i);
-    }
-    for (int i = 1; i <= n; i++)
-    {
-        cout << ans[i] << " ";
-    }
-    return 0;
+    int ans = dfs(1);
+    cout << ans;
 }
