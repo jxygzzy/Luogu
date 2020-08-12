@@ -1,7 +1,7 @@
 /*** 
  * @Author: P19Y0UN9_居居
  * @Date: 2020-08-12 10:59:57
- * @LastEditTime: 2020-08-12 13:38:59
+ * @LastEditTime: 2020-08-12 19:18:49
  * @LastEditors: P19Y0UN9_居居
  * @Description: 
  * @FilePath: \Luogu\P1470 [USACO2.3]最长前缀 Longest Prefix.cpp
@@ -80,21 +80,14 @@ int main()
     for (int j = 1; j < s.length(); j++)
     {
         string t = s.substr(0, j);
-        int start = 0;
-        int len = 0;
         for (it i = o.begin(); i != o.end(); i++)
         {
-            if (KMP(t.substr(start, len), *i) != -1)
+            if (KMP(t, *i) != -1)
             {
-                len++;
-            }
-            else
-            {
-                start++;
-                len=0;
+                ans = j;
+                break;
             }
         }
-        if(start==t.length()) ans=j;
     }
     cout << ans;
 }
