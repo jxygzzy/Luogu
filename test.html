@@ -1,0 +1,359 @@
+<!--
+ * @Author: P19Y0UN9_居居
+ * @Date: 2020-08-14 13:40:54
+ * @LastEditTime: 2020-08-14 14:47:52
+ * @LastEditors: P19Y0UN9_居居
+ * @Description: 
+ * @FilePath: \Luogu\test.html
+ * @居居 <jxygzzy@163.com>
+-->
+<div id="ctl00_ContentPlaceHolder1_JQ1_question" class="surveycontent">
+    <div id='divMaxTime'
+        style="text-align: center; display: none; width:80px; background:white; position:fixed;top:135px;border:1px solid #dbdbdb; padding:8px;z-index:10;">
+        <div id="spanTimeTip" style="border-bottom:1px solid #dbdbdb;height:30px; line-height:30px;">本页时间剩余</div>
+        <div style="color: Red;font-size:16px; height:30px; line-height:30px;" id='spanMaxTime'></div>
+    </div>
+    <div id="ctl00_ContentPlaceHolder1_JQ1_surveyContent">
+        <fieldset class='fieldset' id='fieldset1'>
+            <div class='div_question' id='div1'>
+                <div class='div_title_question_all'>
+                    <div class='div_topic_question'>1.</div>
+                    <div id='divTitle1' class='div_title_question'>您的性别：</div>
+                    <div style='clear:both;'></div>
+                </div>
+                <div class='div_table_radio_question' id='divquestion1'>
+                    <div class='div_table_clear_top'></div>
+                    <ul class='ulradiocheck'>
+                        <li style='width:11.5%;'><a href='javascript:' class='jqRadio' rel='q1_1'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q1' id='q1_1' value='1' /><label for='q1_1'>男</label></li>
+                        <li style='width:11.5%;'><a href='javascript:' class='jqRadio' rel='q1_2'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q1' id='q1_2' value='2' /><label for='q1_2'>女</label></li>
+                        <div style='clear:both;'></div>
+                    </ul>
+                    <div style='clear:both;'></div>
+                    <div class='div_table_clear_bottom'></div>
+                </div>
+                <div class='errorMessage'></div>
+            </div>
+            <div class='div_question' id='div2'>
+                <div class='div_title_question_all'>
+                    <div class='div_topic_question'>2.</div>
+                    <div id='divTitle2' class='div_title_question'>您目前的年级</div>
+                    <div style='clear:both;'></div>
+                </div>
+                <div class='div_table_radio_question' id='divquestion2'>
+                    <div class='div_table_clear_top'></div>
+                    <ul class='ulradiocheck'>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q2_1'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q2' id='q2_1' value='1' /><label for='q2_1'>大一</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q2_2'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q2' id='q2_2' value='2' /><label for='q2_2'>大二</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q2_3'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q2' id='q2_3' value='3' /><label for='q2_3'>大三</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q2_4'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q2' id='q2_4' value='4' /><label for='q2_4'>大四</label></li>
+                        <div style='clear:both;'></div>
+                    </ul>
+                    <div style='clear:both;'></div>
+                    <div class='div_table_clear_bottom'></div>
+                </div>
+                <div class='errorMessage'></div>
+            </div>
+            <div class='div_question' id='div3'>
+                <div class='div_title_question_all'>
+                    <div class='div_topic_question'>3.</div>
+                    <div id='divTitle3' class='div_title_question'>您每天使用网络的时间</div>
+                    <div style='clear:both;'></div>
+                </div>
+                <div class='div_table_radio_question' id='divquestion3'>
+                    <div class='div_table_clear_top'></div>
+                    <ul class='ulradiocheck'>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q3_1'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q3' id='q3_1' value='1' /><label for='q3_1'>1小时内</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q3_2'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q3' id='q3_2' value='2' /><label for='q3_2'>1-3小时</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q3_3'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q3' id='q3_3' value='3' /><label for='q3_3'>3-5小时</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q3_4'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q3' id='q3_4' value='4' /><label for='q3_4'>5小时以上</label></li>
+                        <div style='clear:both;'></div>
+                    </ul>
+                    <div style='clear:both;'></div>
+                    <div class='div_table_clear_bottom'></div>
+                </div>
+                <div class='errorMessage'></div>
+            </div>
+            <div class='div_question' id='div4'>
+                <div class='div_title_question_all'>
+                    <div class='div_topic_question'>4.</div>
+                    <div id='divTitle4' class='div_title_question'>您最久的上网时段为</div>
+                    <div style='clear:both;'></div>
+                </div>
+                <div class='div_table_radio_question' id='divquestion4'>
+                    <div class='div_table_clear_top'></div>
+                    <ul class='ulradiocheck'>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q4_1'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q4' id='q4_1' value='1' /><label for='q4_1'>课后</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q4_2'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q4' id='q4_2' value='2' /><label for='q4_2'>就餐时</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q4_3'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q4' id='q4_3' value='3' /><label for='q4_3'>中午</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q4_4'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q4' id='q4_4' value='4' /><label for='q4_4'>夜间</label></li>
+                        <div style='clear:both;'></div>
+                    </ul>
+                    <div style='clear:both;'></div>
+                    <div class='div_table_clear_bottom'></div>
+                </div>
+                <div class='errorMessage'></div>
+            </div>
+            <div class='div_question' id='div5'>
+                <div class='div_title_question_all'>
+                    <div class='div_topic_question'>5.</div>
+                    <div id='divTitle5' class='div_title_question'>您会为了上网熬夜吗？</div>
+                    <div style='clear:both;'></div>
+                </div>
+                <div class='div_table_radio_question' id='divquestion5'>
+                    <div class='div_table_clear_top'></div>
+                    <ul class='ulradiocheck'>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q5_1'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q5' id='q5_1' value='1' /><label for='q5_1'>每天</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q5_2'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q5' id='q5_2' value='2' /><label for='q5_2'>偶尔</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q5_3'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q5' id='q5_3' value='3' /><label for='q5_3'>从不</label></li>
+                        <div style='clear:both;'></div>
+                    </ul>
+                    <div style='clear:both;'></div>
+                    <div class='div_table_clear_bottom'></div>
+                </div>
+                <div class='errorMessage'></div>
+            </div>
+            <div class='div_question' id='div6'>
+                <div class='div_title_question_all'>
+                    <div class='div_topic_question'>6.</div>
+                    <div id='divTitle6' class='div_title_question'>您经常通过什么上网<span
+                            class='qtypetip'>&nbsp;【<b>最少</b>选择<b>1</b>项】</span></div>
+                    <div style='clear:both;'></div>
+                </div>
+                <div class='div_table_radio_question' id='divquestion6'>
+                    <div class='div_table_clear_top'></div>
+                    <ul class='ulradiocheck'>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q6_1'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q6_1'
+                                type='checkbox' name='q6' value='1' /><label>校园网</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q6_2'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q6_2'
+                                type='checkbox' name='q6' value='2' /><label>流量</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q6_3'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q6_3'
+                                type='checkbox' name='q6' value='3' /><label>wifi</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q6_4'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q6_4'
+                                type='checkbox' name='q6' value='4' /><label>其他</label></li>
+                        <div style='clear:both;'></div>
+                    </ul>
+                    <div style='clear:both;'></div>
+                    <div class='div_table_clear_bottom'></div>
+                </div>
+                <div class='errorMessage'></div>
+            </div>
+            <div class='div_question' id='div7'>
+                <div class='div_title_question_all'>
+                    <div class='div_topic_question'>7.</div>
+                    <div id='divTitle7' class='div_title_question'>您上网常使用<span
+                            class='qtypetip'>&nbsp;【<b>最少</b>选择<b>1</b>项】</span></div>
+                    <div style='clear:both;'></div>
+                </div>
+                <div class='div_table_radio_question' id='divquestion7'>
+                    <div class='div_table_clear_top'></div>
+                    <ul class='ulradiocheck'>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q7_1'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q7_1'
+                                type='checkbox' name='q7' value='1' /><label>手机</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q7_2'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q7_2'
+                                type='checkbox' name='q7' value='2' /><label>电脑</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q7_3'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q7_3'
+                                type='checkbox' name='q7' value='3' /><label>ipad</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q7_4'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q7_4'
+                                type='checkbox' name='q7' value='4' /><label>其他</label></li>
+                        <div style='clear:both;'></div>
+                    </ul>
+                    <div style='clear:both;'></div>
+                    <div class='div_table_clear_bottom'></div>
+                </div>
+                <div class='errorMessage'></div>
+            </div>
+            <div class='div_question' id='div8'>
+                <div class='div_title_question_all'>
+                    <div class='div_topic_question'>8.</div>
+                    <div id='divTitle8' class='div_title_question'>您上网的主要目的<span
+                            class='qtypetip'>&nbsp;【请选择<b>1</b>-<b>4</b>项】</span></div>
+                    <div style='clear:both;'></div>
+                </div>
+                <div class='div_table_radio_question' id='divquestion8'>
+                    <div class='div_table_clear_top'></div>
+                    <ul class='ulradiocheck'>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q8_1'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q8_1'
+                                type='checkbox' name='q8' value='1' /><label>听音乐</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q8_2'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q8_2'
+                                type='checkbox' name='q8' value='2' /><label>聊天打游戏</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q8_3'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q8_3'
+                                type='checkbox' name='q8' value='3' /><label>网购</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q8_4'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q8_4'
+                                type='checkbox' name='q8' value='4' /><label>刷视频</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q8_5'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q8_5'
+                                type='checkbox' name='q8' value='5' /><label>查资料</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q8_6'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q8_6'
+                                type='checkbox' name='q8' value='6' /><label>阅读</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q8_7'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q8_7'
+                                type='checkbox' name='q8' value='7' /><label>其他</label> <input class='underline'
+                                type='text' style='max-width:500px;' value='' rel='q8_7'
+                                onpropertychange='lengthChange(this);' oninput='lengthChange(this);' /></li>
+                        <div style='clear:both;'></div>
+                    </ul>
+                    <div style='clear:both;'></div>
+                    <div class='div_table_clear_bottom'></div>
+                </div>
+                <div class='errorMessage'></div>
+            </div>
+            <div class='div_question' id='div9'>
+                <div class='div_title_question_all'>
+                    <div class='div_topic_question'>9.</div>
+                    <div id='divTitle9' class='div_title_question'>您认为网络对于您来说是否不可或缺？</div>
+                    <div style='clear:both;'></div>
+                </div>
+                <div class='div_table_radio_question' id='divquestion9'>
+                    <div class='div_table_clear_top'></div>
+                    <ul class='ulradiocheck'>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q9_1'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q9' id='q9_1' value='1' /><label for='q9_1'>是</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqRadio' rel='q9_2'><i
+                                    class='iconfontNew'>&#xe6df;</i></a><input style='display:none;' type='radio'
+                                name='q9' id='q9_2' value='2' /><label for='q9_2'>否</label></li>
+                        <div style='clear:both;'></div>
+                    </ul>
+                    <div style='clear:both;'></div>
+                    <div class='div_table_clear_bottom'></div>
+                </div>
+                <div class='errorMessage'></div>
+            </div>
+            <div class='div_question' id='div10'>
+                <div class='div_title_question_all'>
+                    <div class='div_topic_question'>10.</div>
+                    <div id='divTitle10' class='div_title_question'>您认为网络的好处<span
+                            class='qtypetip'>&nbsp;【请选择<b>1</b>-<b>4</b>项】</span></div>
+                    <div style='clear:both;'></div>
+                </div>
+                <div class='div_table_radio_question' id='divquestion10'>
+                    <div class='div_table_clear_top'></div>
+                    <ul class='ulradiocheck'>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q10_1'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a>
+                                    <input style='display:none;' id='q10_1'type='checkbox' name='q10' value='1' />
+                                    <label>便利日常生活</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q10_2'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q10_2'
+                                type='checkbox' name='q10' value='2' /><label>了解更多资讯</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q10_3'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q10_3'
+                                type='checkbox' name='q10' value='3' /><label>缓解压力</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q10_4'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q10_4'
+                                type='checkbox' name='q10' value='4' /><label>广泛交友</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q10_5'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q10_5'
+                                type='checkbox' name='q10' value='5' /><label>打发时间</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q10_6'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q10_6'
+                                type='checkbox' name='q10' value='6' /><label>其他</label> <input class='underline'
+                                type='text' style='max-width:500px;' value='' rel='q10_6'
+                                onpropertychange='lengthChange(this);' oninput='lengthChange(this);' /></li>
+                        <div style='clear:both;'></div>
+                    </ul>
+                    <div style='clear:both;'></div>
+                    <div class='div_table_clear_bottom'></div>
+                </div>
+                <div class='errorMessage'></div>
+            </div>
+            <div class='div_question' id='div11'>
+                <div class='div_title_question_all'>
+                    <div class='div_topic_question'>11.</div>
+                    <div id='divTitle11' class='div_title_question'>您认为网络的坏处<span
+                            class='qtypetip'>&nbsp;【请选择<b>1</b>-<b>4</b>项】</span></div>
+                    <div style='clear:both;'></div>
+                </div>
+                <div class='div_table_radio_question' id='divquestion11'>
+                    <div class='div_table_clear_top'></div>
+                    <ul class='ulradiocheck'>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q11_1'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q11_1'
+                                type='checkbox' name='q11' value='1' /><label>容易上瘾，精神空虚</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q11_2'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q11_2'
+                                type='checkbox' name='q11' value='2' /><label>浪费时间和精力</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q11_3'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q11_3'
+                                type='checkbox' name='q11' value='3' /><label>损坏视力</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q11_4'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q11_4'
+                                type='checkbox' name='q11' value='4' /><label>影响心情，受到负面影响</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q11_5'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q11_5'
+                                type='checkbox' name='q11' value='5' /><label>网络暴力</label></li>
+                        <li style='width:99%;'><a href='javascript:' class='jqCheckbox' rel='q11_6'><i
+                                    class='iconfontNew'>&#xe6e1;</i></a><input style='display:none;' id='q11_6'
+                                type='checkbox' name='q11' value='6' /><label>其他</label> <input class='underline'
+                                type='text' style='max-width:500px;' value='' rel='q11_6'
+                                onpropertychange='lengthChange(this);' oninput='lengthChange(this);' /></li>
+                        <div style='clear:both;'></div>
+                    </ul>
+                    <div style='clear:both;'></div>
+                    <div class='div_table_clear_bottom'></div>
+                </div>
+                <div class='errorMessage'></div>
+            </div>
+            <div class='div_question' id='div12'>
+                <div class='div_title_question_all'>
+                    <div class='div_topic_question'>12.</div>
+                    <div id='divTitle12' class='div_title_question'>您对大学生使用网络有什么期待和建议</div>
+                    <div style='clear:both;'></div>
+                </div>
+                <div class='div_table_radio_question' id='divquestion12'>
+                    <div class='div_table_clear_top'></div><textarea title=''
+                        style='overflow: auto;padding-right:27px;width:62%;height:66px;' class='inputtext' value=''
+                        id='q12' name='q12'></textarea>
+                    <div class='div_table_clear_bottom'></div>
+                </div>
+                <div class='errorMessage'></div>
+            </div>
+        </fieldset>
+    </div>
