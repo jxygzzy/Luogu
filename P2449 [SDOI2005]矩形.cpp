@@ -21,11 +21,11 @@ int find(int x)
 
 bool check(node a, node b)
 {
-    if ((a.x2 < b.x1 || a.x2 < b.x1) || (a.y2 < b.y1 || a.y2 < b.y1))
-        return false;
-    if ((a.x1 == b.x2 || a.x2 == b.x1) && (a.y1 == b.y2 || a.y2 == b.y1))
-        return false;
-    return true;
+    if ((a.y1 < b.x1 || b.y2 < a.x1) || (a.y2 < b.x2 || b.y2 < a.x2))
+        return 0;
+    if ((a.x1 == b.y1 || a.y2 == b.x1) && (a.x2 == b.y2 || a.y2 == b.x2))
+        return 0;
+    return 1;
 }
 
 int main()
@@ -52,7 +52,7 @@ int main()
         if (f[i] == i)
         {
             ans++;
-        }   
+        }
     }
     cout << ans;
 }
