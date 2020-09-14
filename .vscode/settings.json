@@ -5,7 +5,8 @@
         "xstring": "cpp",
         "algorithm": "cpp",
         "iosfwd": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "utility": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }
