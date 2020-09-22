@@ -1,62 +1,33 @@
-/*** 
- * @Author: P19Y0UN9_居居
- * @Date: 2020-08-06 15:40:44
- * @LastEditTime: 2020-08-06 17:15:53
- * @LastEditors: P19Y0UN9_居居
- * @Description: 
- * @FilePath: \Luogu\P1823 [COI2007] Patrik 音乐会的等待.cpp
- * @居居 <jxygzzy@163.com>
- */
-#include <iostream>
-#include <algorithm>
-#define maxn 500005
+#include <stdio.h>
+#include <stack>
+#define ll long long
 
 using namespace std;
 
+typedef pair<int, int> pii;
+stack<pii> s;
+ll ans;
 int n;
-long long a[maxn];
-int ans;
-
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    // freopen("a.in","r",stdin);
-    // freopen("a.out","w",stdout);
-    cin >> n;
-    int flag = 0;
-    for (int i = 1; i <= n; i++)
+    scanf("%d", &n);
+    while (n--)
     {
-        cin >> a[i];
-        if (!flag && a[i] != 10)
-            flag = 1;
-    }
-    if (n == 500000 && !flag)
-    {
-        cout << 124999750000;
-        return 0;
-    }
-
-    ans = n - 1;
-    for (int i = 1; i <= n - 1; i++)
-    {
-        int t = a[i + 1];
-        for (int j = i + 2; j <= n; j++)
+        int x;
+        scanf("%d", &x);
+        pii p = make_pair(x, 1);
+        while (!s.empty() && x >= s.top().first)
         {
-            // int flag = check(i, j);
-            // if (flag == 2)
-            //     ans++;
-            // else if (flag == 0)
-            //     break;
-            if (a[i] >= t && a[j] >= t)
-            {
-                ans++;
-                t = a[j];
-            }
-            if (t > a[i])
-                break;
+            if (x == s.top().first)
+                p.second += s.top().second;
+            ans += s.top().second;
+            s.pop();
         }
+        if (!s.empty())
+            ans++;
+        s.push(p);
     }
-    cout << ans;
+    printf("%lld\n", ans);
     return 0;
 }
